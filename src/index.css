@@ -1,0 +1,31 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Animaciones personalizadas */
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-slideDown {
+  animation: slideDown 0.3s ease-out;
+}
+
+/* Estilos base personalizados */
+@layer base {
+  body {
+    @apply bg-gray-50 text-gray-800;
+    font-family: 'Segoe UI', system-ui, sans-serif;
+  }
+  
+  input:focus, textarea:focus {
+    @apply outline-none ring-2 ring-blue-500 ring-opacity-50;
+  }
+}
